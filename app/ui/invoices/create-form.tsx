@@ -11,6 +11,9 @@ import { createInvoice } from '@/app/lib/actions';
 
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
+  const createInvoice = async (formData: FormData) => {
+    await createInvoice(formData);
+  }
   return (
     <form action={createInvoice}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
